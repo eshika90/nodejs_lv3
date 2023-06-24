@@ -9,7 +9,7 @@ module.exports = {
         primaryKey: true, // Primary Key (기본키)
         type: Sequelize.INTEGER,
       },
-      email: {
+      nickname: {
         allowNull: false, // NOT NULL
         type: Sequelize.STRING,
         unique: true,
