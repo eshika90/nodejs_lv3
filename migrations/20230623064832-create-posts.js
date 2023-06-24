@@ -18,6 +18,15 @@ module.exports = {
         },
         onDelete: 'CASCADE', // 만약 Users 모델의 userId가 삭제되면, Posts 모델의 데이터가 삭제됩니다.
       },
+      nickname: {
+        allowNull: false, // NOT NULL
+        type: Sequelize.STRING,
+        references: {
+          model: 'Users', // Users 모델을 참조.
+          key: 'nickname', // nickname 참조.
+        },
+        onDelete: 'CASCADE', // 만약 Users 모델의 userId가 삭제되면, Posts 모델의 데이터가 삭제됩니다.
+      },
       title: {
         allowNull: false, // NOT NULL
         type: Sequelize.STRING,
